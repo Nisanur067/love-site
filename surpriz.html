@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sistem</title>
+<style>
+body{
+background:black;
+color:lime;
+font-family:Consolas;
+font-size:20px;
+padding:40px;
+}
+#heart{
+font-size:80px;
+text-align:center;
+margin-top:40px;
+display:none;
+}
+</style>
+</head>
+<body>
+
+<div id="text"></div>
+<div id="heart">❤️</div>
+
+<script>
+const messages=[
+"Sistem başlatılıyor...",
+"Mutluluk taranıyor...",
+"Eşleşme bulundu!",
+"İsim: Veysel Türk",
+"Durum: Hayatımın aşkı",
+"Bağlantı: Kalıcı",
+"Erişim Seviyesi: Sonsuz",
+"",
+"Bu sistemdeki en değerli veri sensin."
+];
+
+let i=0;
+function yaz(){
+if(i<messages.length){
+document.getElementById("text").innerHTML+=messages[i]+"<br>";
+i++;
+setTimeout(yaz,1000);
+}else{
+document.getElementById("heart").style.display="block";
+}
+}
+yaz();
+</script>
+
+</body>
+</html>
